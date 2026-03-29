@@ -17,6 +17,10 @@ app.get('/notes', (req,res) =>{
     })
 })
 
+app.delete('/notes/:index', (req,res) =>{
+    const delete_id = parseInt(req.params.index);
+    notes.splice(delete_id,1);
+})
 
 
 app.listen(3000,()=>{
